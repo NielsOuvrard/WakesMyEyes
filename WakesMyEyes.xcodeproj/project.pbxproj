@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		DD40F4EC2C7D1E3300B593DB /* WakesMyEyesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40F4EB2C7D1E3300B593DB /* WakesMyEyesApp.swift */; };
-		DD40F4EE2C7D1E3300B593DB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40F4ED2C7D1E3300B593DB /* ContentView.swift */; };
 		DD40F4F02C7D1E3400B593DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD40F4EF2C7D1E3400B593DB /* Assets.xcassets */; };
 		DD40F4F32C7D1E3400B593DB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD40F4F22C7D1E3400B593DB /* Preview Assets.xcassets */; };
 		DD40F4FD2C7D1E3400B593DB /* WakesMyEyesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40F4FC2C7D1E3400B593DB /* WakesMyEyesTests.swift */; };
 		DD40F5072C7D1E3400B593DB /* WakesMyEyesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40F5062C7D1E3400B593DB /* WakesMyEyesUITests.swift */; };
 		DD40F5092C7D1E3400B593DB /* WakesMyEyesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40F5082C7D1E3400B593DB /* WakesMyEyesUITestsLaunchTests.swift */; };
+		DD40F5172C7D354D00B593DB /* Peripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40F5162C7D354D00B593DB /* Peripheral.swift */; };
+		DD40F51B2C7D359700B593DB /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40F51A2C7D359700B593DB /* BLEManager.swift */; };
+		DD40F51D2C7D3CED00B593DB /* ContentView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40F51C2C7D3CED00B593DB /* ContentView2.swift */; };
+		DD40F51F2C7D447D00B593DB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40F51E2C7D447D00B593DB /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,6 @@
 /* Begin PBXFileReference section */
 		DD40F4E82C7D1E3300B593DB /* WakesMyEyes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WakesMyEyes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD40F4EB2C7D1E3300B593DB /* WakesMyEyesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakesMyEyesApp.swift; sourceTree = "<group>"; };
-		DD40F4ED2C7D1E3300B593DB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DD40F4EF2C7D1E3400B593DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD40F4F22C7D1E3400B593DB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DD40F4F82C7D1E3400B593DB /* WakesMyEyesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WakesMyEyesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +46,11 @@
 		DD40F5022C7D1E3400B593DB /* WakesMyEyesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WakesMyEyesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD40F5062C7D1E3400B593DB /* WakesMyEyesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakesMyEyesUITests.swift; sourceTree = "<group>"; };
 		DD40F5082C7D1E3400B593DB /* WakesMyEyesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakesMyEyesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DD40F5162C7D354D00B593DB /* Peripheral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Peripheral.swift; sourceTree = "<group>"; };
+		DD40F51A2C7D359700B593DB /* BLEManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEManager.swift; sourceTree = "<group>"; };
+		DD40F51C2C7D3CED00B593DB /* ContentView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView2.swift; sourceTree = "<group>"; };
+		DD40F51E2C7D447D00B593DB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DD40F5222C7D48C700B593DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +101,12 @@
 		DD40F4EA2C7D1E3300B593DB /* WakesMyEyes */ = {
 			isa = PBXGroup;
 			children = (
+				DD40F5222C7D48C700B593DB /* Info.plist */,
+				DD40F5192C7D358600B593DB /* Views */,
+				DD40F5182C7D357E00B593DB /* ViewModel */,
+				DD40F5152C7D352F00B593DB /* Models */,
 				DD40F4EB2C7D1E3300B593DB /* WakesMyEyesApp.swift */,
-				DD40F4ED2C7D1E3300B593DB /* ContentView.swift */,
+				DD40F51E2C7D447D00B593DB /* ContentView.swift */,
 				DD40F4EF2C7D1E3400B593DB /* Assets.xcassets */,
 				DD40F4F12C7D1E3400B593DB /* Preview Content */,
 			);
@@ -125,6 +136,30 @@
 				DD40F5082C7D1E3400B593DB /* WakesMyEyesUITestsLaunchTests.swift */,
 			);
 			path = WakesMyEyesUITests;
+			sourceTree = "<group>";
+		};
+		DD40F5152C7D352F00B593DB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DD40F5162C7D354D00B593DB /* Peripheral.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DD40F5182C7D357E00B593DB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DD40F51A2C7D359700B593DB /* BLEManager.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DD40F5192C7D358600B593DB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DD40F51C2C7D3CED00B593DB /* ContentView2.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +292,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD40F4EE2C7D1E3300B593DB /* ContentView.swift in Sources */,
+				DD40F51D2C7D3CED00B593DB /* ContentView2.swift in Sources */,
+				DD40F51F2C7D447D00B593DB /* ContentView.swift in Sources */,
+				DD40F51B2C7D359700B593DB /* BLEManager.swift in Sources */,
 				DD40F4EC2C7D1E3300B593DB /* WakesMyEyesApp.swift in Sources */,
+				DD40F5172C7D354D00B593DB /* Peripheral.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,8 +460,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WakesMyEyes/Preview Content\"";
+				DEVELOPMENT_TEAM = 2G2547YLF5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WakesMyEyes/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app uses Bluetooth to connect to and interact with nearby devices.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -450,8 +493,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WakesMyEyes/Preview Content\"";
+				DEVELOPMENT_TEAM = 2G2547YLF5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WakesMyEyes/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app uses Bluetooth to connect to and interact with nearby devices.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
