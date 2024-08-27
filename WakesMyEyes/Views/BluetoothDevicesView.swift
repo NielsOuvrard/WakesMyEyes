@@ -9,19 +9,25 @@ import Foundation
 import SwiftUI
 import CoreBluetooth
 
-
 struct BluetoothDevicesView: View {
     @StateObject var bleManager = BLEManager()
+    @State private var isPresentingTimeSelector = false
     
     var body: some View {
         VStack(spacing: 10) {
-            Text("Bluetooth Devices")
-                .font(.largeTitle)
-                .frame(maxWidth: .infinity, alignment: .center)
+            // Text("Connect your device")
+            //     .font(.largeTitle)
+            //     .frame(maxWidth: .infinity, alignment: .center)
             
             List(bleManager.peripherals) { peripheral in
                 HStack {
-                    Text(peripheral.name)
+                    if peripheral.name == "Hoot hoot" {
+                        Text(peripheral.name)
+                            .foregroundColor(.blue)
+                            .bold()
+                    } else {
+                        Text(peripheral.name)
+                    }
                     Spacer()
                     Text(String(peripheral.rssi))
                     Button(action: {
@@ -37,6 +43,7 @@ struct BluetoothDevicesView: View {
                 }
             }
             .frame(height: UIScreen.main.bounds.height / 2)
+
             
             Spacer()
             
@@ -68,8 +75,11 @@ struct BluetoothDevicesView: View {
                 .buttonStyle(BorderedProminentButtonStyle())
             }
             .padding()
-            Spacer()
+            
+            .padding()
         }
+        .navigationTitle("Bluetooth Devices")
+        
         .onAppear {
             if bleManager.isSwitchedOn {
                 bleManager.startScanning()

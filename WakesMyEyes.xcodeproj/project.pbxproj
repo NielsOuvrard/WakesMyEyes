@@ -15,8 +15,11 @@
 		DD40F5092C7D1E3400B593DB /* WakesMyEyesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40F5082C7D1E3400B593DB /* WakesMyEyesUITestsLaunchTests.swift */; };
 		DD40F5172C7D354D00B593DB /* Peripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40F5162C7D354D00B593DB /* Peripheral.swift */; };
 		DD40F51B2C7D359700B593DB /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40F51A2C7D359700B593DB /* BLEManager.swift */; };
-		DD40F51D2C7D3CED00B593DB /* ContentView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40F51C2C7D3CED00B593DB /* ContentView2.swift */; };
+		DD40F51D2C7D3CED00B593DB /* BluetoothDevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40F51C2C7D3CED00B593DB /* BluetoothDevicesView.swift */; };
 		DD40F51F2C7D447D00B593DB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40F51E2C7D447D00B593DB /* ContentView.swift */; };
+		DDB06CD12C7E34FC006D8054 /* TimeSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB06CD02C7E34FC006D8054 /* TimeSelectorView.swift */; };
+		DDB06CD32C7E3677006D8054 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB06CD22C7E3677006D8054 /* SettingsView.swift */; };
+		DDB06CD52C7E394D006D8054 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB06CD42C7E394D006D8054 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,9 +51,12 @@
 		DD40F5082C7D1E3400B593DB /* WakesMyEyesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakesMyEyesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DD40F5162C7D354D00B593DB /* Peripheral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Peripheral.swift; sourceTree = "<group>"; };
 		DD40F51A2C7D359700B593DB /* BLEManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEManager.swift; sourceTree = "<group>"; };
-		DD40F51C2C7D3CED00B593DB /* ContentView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView2.swift; sourceTree = "<group>"; };
+		DD40F51C2C7D3CED00B593DB /* BluetoothDevicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothDevicesView.swift; sourceTree = "<group>"; };
 		DD40F51E2C7D447D00B593DB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DD40F5222C7D48C700B593DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DDB06CD02C7E34FC006D8054 /* TimeSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSelectorView.swift; sourceTree = "<group>"; };
+		DDB06CD22C7E3677006D8054 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		DDB06CD42C7E394D006D8054 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,7 +163,10 @@
 		DD40F5192C7D358600B593DB /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DD40F51C2C7D3CED00B593DB /* ContentView2.swift */,
+				DD40F51C2C7D3CED00B593DB /* BluetoothDevicesView.swift */,
+				DDB06CD02C7E34FC006D8054 /* TimeSelectorView.swift */,
+				DDB06CD22C7E3677006D8054 /* SettingsView.swift */,
+				DDB06CD42C7E394D006D8054 /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -292,9 +301,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD40F51D2C7D3CED00B593DB /* ContentView2.swift in Sources */,
+				DDB06CD32C7E3677006D8054 /* SettingsView.swift in Sources */,
+				DDB06CD12C7E34FC006D8054 /* TimeSelectorView.swift in Sources */,
+				DD40F51D2C7D3CED00B593DB /* BluetoothDevicesView.swift in Sources */,
 				DD40F51F2C7D447D00B593DB /* ContentView.swift in Sources */,
 				DD40F51B2C7D359700B593DB /* BLEManager.swift in Sources */,
+				DDB06CD52C7E394D006D8054 /* HomeView.swift in Sources */,
 				DD40F4EC2C7D1E3300B593DB /* WakesMyEyesApp.swift in Sources */,
 				DD40F5172C7D354D00B593DB /* Peripheral.swift in Sources */,
 			);

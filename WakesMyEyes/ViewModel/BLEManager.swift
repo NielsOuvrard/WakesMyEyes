@@ -67,7 +67,7 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate, CBPeriph
     
     
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
-        print( "Connected to \(peripheral.name ?? "Unknown")") // Print a message to the console
+        print("Connected to \(peripheral.name ?? "Unknown")") // Print a message to the console
         peripheral.discoverServices(nil) // Discover services on the connected peripheral
     }
     
