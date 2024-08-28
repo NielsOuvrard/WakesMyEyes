@@ -52,8 +52,8 @@ struct TimeSelectorView: View {
         let center = UNUserNotificationCenter.current()
 
         let content = UNMutableNotificationContent()
-        content.title = "Alarm"
-        content.body = "Your alarm is ringing!"
+        content.title = "Wakes your eyes"
+        content.body = "Your alarm is ringing!\nOpen your eyes!"
 
         let dateComponents = Calendar.current.dateComponents([.hour, .minute], from: alarmTime)
 

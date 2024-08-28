@@ -31,8 +31,8 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate, CBPeriph
     }
     
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String: Any], rssi RSSI: NSNumber) {
-        let newPeripheral = Peripheral(id: peripheral.identifier, name: peripheral.name ?? "Unknown", rssi: RSSI.intValue)
-        
+        let newPeripheral = Peripheral(id: peripheral.identifier, name: peripheral.name ?? "Unknown", rssi: RSSI.intValue, cbPeripheral: peripheral)
+
         if !peripherals.contains(where: {$0.id == newPeripheral.id}) {
             DispatchQueue.main.async {
                 self.peripherals.append(newPeripheral)
@@ -54,11 +54,12 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate, CBPeriph
     
     
     func connect(to peripheral: Peripheral) {
-        guard let cbPeripheral = myCentral.retrievePeripherals(withIdentifiers: [peripheral.id]).first
-            else { // Retrieve the peripheral by its identifier
-            print("Peripheral not found for connection") // Print a message if the peripheral is not found
-            return // Return if the peripheral is not found
-        }
+        // guard let cbPeripheral = myCentral.retrievePeripherals(withIdentifiers: [peripheral.id]).first
+        //     else { // Retrieve the peripheral by its identifier
+        //     print("Peripheral not found for connection") // Print a message if the peripheral is not found
+        //     return // Return if the peripheral is not found
+        // }
+        let cbPeripheral = peripheral.cbPeripheral
         
         connectedPeripheralUUID = cbPeripheral.identifier // Set the connected peripheral's UUID
         cbPeripheral.delegate = self // Set self as the delegate of the peripheral
