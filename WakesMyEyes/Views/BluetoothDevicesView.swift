@@ -19,9 +19,15 @@ struct BluetoothDevicesView: View {
         VStack {
             List(bleManager.peripherals) { peripheral in
                 HStack {
-                    Text(peripheral.name)
-                        .font(.headline)
-                        .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
+                    if peripheral.name == "Hoot hoot" {
+                        Text(peripheral.name)
+                            .foregroundColor(colorScheme == .dark ? Color.blue : Color.blue.opacity(0.7))
+                            .bold()
+                    } else {
+                        Text(peripheral.name)
+                            .font(.headline)
+                            .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
+                    }
                     Spacer()
                     /*
                     Button(action: {
