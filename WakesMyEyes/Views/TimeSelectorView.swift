@@ -10,6 +10,7 @@ import SwiftUI
 
 import UserNotifications
 struct TimeSelectorView: View {
+    @Environment(\.colorScheme) var colorScheme
     @State private var alarmTime = Date()
     
     init() {
@@ -30,19 +31,22 @@ struct TimeSelectorView: View {
                     .datePickerStyle(WheelDatePickerStyle())
                     .labelsHidden()
                     .padding()
-                
+                    .background(colorScheme == .dark ? Color.black : Color.white)
+                    .cornerRadius(10)
+
                 Button("Set Alarm") {
                     // Here you can add the code to set the alarm
                     print("Alarm set for \(alarmTime)")
                     scheduleNotification()
                 }
                 .padding()
-                .background(Color.blue)
+                .background(colorScheme == .dark ? Color.blue : Color.blue.opacity(0.7))
                 .foregroundColor(.white)
                 .cornerRadius(10)
-                
+
                 Spacer()
             }
+            .background(colorScheme == .dark ? Color.black.edgesIgnoringSafeArea(.all) : Color.white.edgesIgnoringSafeArea(.all))
             .navigationTitle("Set Alarm")
         }
     }
